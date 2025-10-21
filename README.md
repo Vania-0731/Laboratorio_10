@@ -1,4 +1,5 @@
 # 🎬 Prime Video - Demo (UI Estática)
+<img width="708" height="1054" alt="image" src="https://github.com/user-attachments/assets/3f9f52d0-a7af-428e-83ec-3be2218d45ed" />
 
 ## 📖 Descripción
 Este proyecto es una **demo visual inspirada en la interfaz de Prime Video**, creada con **Flutter**.  
@@ -99,3 +100,4 @@ flutter:
    ```
 
 ---
+
