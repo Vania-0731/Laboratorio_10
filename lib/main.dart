@@ -43,7 +43,7 @@ class ImageListView extends StatelessWidget {
         backgroundColor: Color(0xFF0F1720),
         title: Row(
           children: [
-            Text('prime video', style: TextStyle(fontFamily: 'SansBogle', color: Colors.white, fontWeight: FontWeight.w700)),
+            Text('prime video', style: TextStyle(fontFamily: 'SansBogle', color: const Color.fromARGB(255, 19, 113, 255), fontWeight: FontWeight.w700)),
             SizedBox(width: 20),
             TextButton(
               onPressed: () {},
