@@ -1,43 +1,72 @@
-# Prime Video - Demo (UI estático)
+# 🎬 Prime Video - Demo (UI Estática)
 
-Descripción
-- Demo visual que imita el diseño de Prime Video (solo UI).  
-- Muestra 3 imágenes locales y 3 imágenes desde la nube, y usa 3 fuentes locales.
+## 📖 Descripción
+Este proyecto es una **demo visual inspirada en la interfaz de Prime Video**, creada con **Flutter**.  
+🖼️ Muestra una estructura simple con:
+- Tres imágenes locales (almacenadas en `assets/images/`)
+- Tres imágenes remotas (cargadas desde la nube)
+- Tres fuentes personalizadas (almacenadas en `assets/fonts/`)
 
-Estructura de carpetas (resumen)
-- prime_video/
-  - lib/
-    - main.dart
-  - assets/
-    - images/
-      - dinosaurio.jpg
-      - inside_out.webp
-      - insidious.jpg
-    - fonts/
-      - Jacquard-Regular.ttf
-      - SansBogle-Regular.ttf
-      - GrundGuides-Regular.ttf
-  - pubspec.yaml
-  - README.md
+> ⚙️ *La aplicación no tiene lógica funcional ni conexión a API. Solo representa el diseño (UI estática).*
 
-Qué contiene cada carpeta
-- assets/images/: posters locales usados en la app (mencionar nombres exactos arriba).  
-- assets/fonts/: fuentes descargadas y referenciadas en pubspec.yaml.  
-- lib/main.dart: código principal que crea la UI (AppBar estilo Prime, listas horizontales, etc.).
+---
 
-Ejemplo de entradas a añadir en pubspec.yaml
-- Declara las imágenes y las fuentes para que Flutter las incluya en la app.
+## 🗂️ Estructura de carpetas
+
+```
+prime_video/
+├── lib/
+│   └── main.dart                # Código principal de la aplicación
+├── assets/
+│   ├── images/                  # Imágenes locales (posters)
+│   │   ├── dinosaurio.jpg
+│   │   ├── inside_out.webp
+│   │   └── insidious.jpg
+│   └── fonts/                   # Fuentes locales utilizadas en la UI
+│       ├── Jacquard-Regular.ttf
+│       ├── SansBogle-Regular.ttf
+│       └── GrundGuides-Regular.ttf
+├── pubspec.yaml                 # Configuración del proyecto Flutter
+└── README.md                    # Este archivo
+```
+
+---
+
+## 🧩 Archivos principales
+
+### 🖥️ `lib/main.dart`
+Contiene toda la interfaz:
+- AppBar con el título “Prime Video” y botones personalizados.
+- Dos listas horizontales (`ListView.separated`):
+  - 🎞️ “Destacados” → Imágenes locales.
+  - ☁️ “Recomendados en la nube” → Imágenes de internet.
+
+### 🖼️ `assets/images/`
+Posters locales usados en la app:
+- `dinosaurio.jpg`
+- `inside_out.webp`
+- `insidious.jpg`
+
+### 🔠 `assets/fonts/`
+Fuentes locales referenciadas en el archivo `pubspec.yaml`:
+- `Jacquard-Regular.ttf`
+- `SansBogle-Regular.ttf`
+- `GrundGuides-Regular.ttf`
+
+---
+
+## ⚙️ Configuración en `pubspec.yaml`
+
+Ejemplo de cómo declarar los recursos:
 
 ```yaml
-# filepath: c:\Users\Sonaly\Documents\TECSUP\QUINTO CICLO\Aplicaciones Moviles Multiplataforma\Semana 10\prime_video\pubspec.yaml
-# ...existing code...
 flutter:
   uses-material-design: true
 
   assets:
-    - [dinosaurio.jpg](http://_vscodecontentref_/0)
-    - [inside_out.webp](http://_vscodecontentref_/1)
-    - [insidious.jpg](http://_vscodecontentref_/2)
+    - assets/images/dinosaurio.jpg
+    - assets/images/inside_out.webp
+    - assets/images/insidious.jpg
 
   fonts:
     - family: Jacquard
@@ -49,4 +78,24 @@ flutter:
     - family: GrundGuides
       fonts:
         - asset: assets/fonts/GrundGuides-Regular.ttf
-# ...existing code...
+```
+
+---
+
+## 🚀 Ejecución del proyecto
+
+1. Abre el proyecto en **Visual Studio Code** o tu IDE favorito.  
+2. Asegúrate de tener Flutter configurado correctamente:
+   ```bash
+   flutter doctor
+   ```
+3. Instala las dependencias:
+   ```bash
+   flutter pub get
+   ```
+4. Ejecuta la app:
+   ```bash
+   flutter run
+   ```
+
+---
